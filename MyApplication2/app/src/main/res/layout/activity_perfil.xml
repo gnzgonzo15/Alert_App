@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.avallejo.myapplication.Perfil">
+
+
+    <ImageView
+        android:layout_width="140sp"
+        android:layout_height="140sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="78sp"
+        android:src="@drawable/perfil"
+        />
+
+    <TextView
+        android:id="@+id/textuser"
+        android:layout_width="wrap_content"
+        android:layout_height="40sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="230sp"
+        android:hint=""
+        android:textAlignment="center"
+
+        />
+
+    <TextView
+        android:id="@+id/ver_usuario"
+        android:layout_width="match_parent"
+        android:layout_height="45sp"
+        android:textAlignment="center"
+        android:layout_below="@+id/textuser"
+        android:text="@string/nombre_de_usuario"
+        android:layout_centerHorizontal="true"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/textcorreo"
+        android:layout_width="wrap_content"
+        android:layout_height="40sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="330sp"
+        android:hint=""
+        android:textAlignment="center"
+
+        />
+
+    <TextView
+        android:id="@+id/ver_nombre"
+        android:layout_width="250sp"
+        android:layout_height="43sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="360sp"
+        android:text="@string/correo"
+        android:textAlignment="center"
+        android:textSize="30sp"
+
+        />
+
+    <TextView
+        android:id="@+id/textpass"
+        android:layout_width="wrap_content"
+        android:layout_height="40sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="420sp"
+        android:hint=""
+        android:textAlignment="center"
+
+        />
+
+    <TextView
+        android:id="@+id/ver_pass"
+        android:layout_width="250sp"
+        android:layout_height="45sp"
+        android:layout_marginTop="450sp"
+        android:text="@string/contrase_a"
+        android:textAlignment="center"
+        android:layout_centerHorizontal="true"
+        android:textSize="30sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/actualizar"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="500sp"
+        android:id="@+id/ActualizarP"
+        android:textStyle="bold"
+
+        />
+
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="0dp"
+        android:layout_marginStart="0dp"
+        android:background="?android:attr/windowBackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:menu="@menu/navigation" />
+
+
+</RelativeLayout>

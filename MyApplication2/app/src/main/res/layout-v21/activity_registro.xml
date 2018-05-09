@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.avallejo.myapplication.RegistroActivity">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/audifonos2"
+        android:scaleType="centerCrop"
+         />
+
+    <EditText
+        android:id="@+id/Reg_nombre"
+        android:layout_width="200sp"
+        android:layout_height="40sp"
+        android:layout_marginTop="100dp"
+        android:ems="10"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:hint="@string/nombre"
+        android:inputType="text"
+        android:padding="1sp"
+        android:textColor="#fff"
+        android:backgroundTint="#fff"
+        android:foregroundTint="#fff"
+        android:textColorHint="#ffffff"
+        android:textStyle="bold" />
+
+    <EditText
+
+        android:id="@+id/Reg_user"
+        android:layout_width="200sp"
+        android:layout_height="40sp"
+        android:layout_marginTop="150sp"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:textColorHint="#ffffff"
+        android:hint="@string/usuario"
+        android:textColor="#fff"
+        android:backgroundTint="#fff"
+        android:foregroundTint="#fff"
+        android:padding="1sp"
+        android:inputType="text"
+        android:ems="10"
+        android:textStyle="bold"
+
+
+
+        />
+
+    <EditText
+        android:layout_width="200sp"
+        android:layout_height="40sp"
+        android:layout_marginTop="200sp"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:textColorHint="#ffffff"
+        android:id="@+id/Reg_pass"
+        android:textColor="#fff"
+        android:backgroundTint="#fff"
+        android:foregroundTint="#fff"
+        android:hint="@string/contrase_a"
+        android:padding="1sp"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:textStyle="bold"
+
+
+
+        />
+
+
+
+    <EditText
+        android:layout_width="200sp"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="250sp"
+        android:textColor="#fff"
+        android:backgroundTint="#fff"
+        android:foregroundTint="#fff"
+        android:textColorHint="#ffffff"
+        android:hint="@string/confirmar_contrase_a"
+        android:textStyle="bold"
+        android:inputType="textPassword"
+        />
+
+
+
+    <Button
+
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="360sp"
+        android:id="@+id/Reg_button"
+        android:text="@string/registrarse"
+        android:textColor="#FFFFFF"
+        android:layout_width="150sp"
+        android:layout_height="42dp"
+        android:background="@drawable/buttonshape"
+        android:textStyle="bold"
+
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ya_tengo_una_cuenta"
+        android:textColor="#FFFFFF"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="420sp"
+        android:id="@+id/Registrado"
+        android:textStyle="bold"
+
+        />
+
+</RelativeLayout>

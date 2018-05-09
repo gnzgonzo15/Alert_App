@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.avallejo.myapplication.LoginActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/audifonos2"
+        android:scaleType="centerCrop"
+
+        />
+
+
+
+    <ImageView
+
+        android:layout_marginTop="52sp"
+        android:layout_width="150sp"
+        android:layout_height="150sp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/mute1"
+        />
+
+    <EditText
+        android:layout_width="200sp"
+        android:layout_height="35sp"
+        android:layout_marginTop="230sp"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:textColorHint="#ffffff"
+        android:id="@+id/User"
+        android:hint="Usuario"
+        android:textColorHighlight="#fff"
+        android:shadowColor="#fff"
+        android:textColor="#fff"
+        android:backgroundTint="#fff"
+        android:foregroundTint="#fff"
+        android:drawableTint="#fff"
+        android:textColorLink="#fff"
+        android:padding="1sp"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:textStyle="bold"
+
+        />
+
+    <EditText
+        android:layout_width="200sp"
+        android:layout_height="40sp"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="300sp"
+        android:id="@+id/Pass"
+        android:textColorHint="#ffffff"
+        android:textColor="#fff"
+        android:backgroundTint="#fff"
+        android:foregroundTint="#fff"
+        android:drawableTint="#fff"
+        android:hint="Contraseña"
+        android:textStyle="bold"
+        android:inputType="textPassword"
+
+        />
+
+    <RadioButton
+
+        android:id="@+id/rbsession"
+        android:layout_width="match_parent"
+        android:layout_height="25sp"
+        android:layout_marginTop="350sp"
+        android:text="Recordarme"
+        android:textColor="#fff"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="250sp"
+        android:layout_marginLeft="250sp" />
+
+
+    <Button
+
+
+        android:layout_centerHorizontal="true"
+        android:id="@+id/Login"
+        android:text="Ingresar"
+        android:textColor="#FFFFFF"
+        android:layout_width="150sp"
+        android:layout_height="42dp"
+        android:background="@drawable/buttonshape"
+        android:textStyle="bold"
+        android:layout_marginTop="390sp"
+
+        />
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No tengo una cuenta"
+        android:textColor="#FFFFFF"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="450sp"
+        android:id="@+id/Registrarse"
+        android:textStyle="bold"
+
+        />
+
+
+</RelativeLayout>
