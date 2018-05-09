@@ -23,9 +23,6 @@ public class RegistroActivity extends AppCompatActivity implements View.OnClickL
     TextView registrado;
     Button btn_register;
 
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
