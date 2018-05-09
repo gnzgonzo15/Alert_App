@@ -49,16 +49,19 @@ public class Menu extends AppCompatActivity  {
                     return true;
 
                 case R.id.Sonidos:
+                    item.setChecked(true);
                     Intent intent2 = new Intent(Menu.this, MainActivity.class);
                     Menu.this.startActivity(intent2);
                     return true;
 
                 case R.id.Perfil:
+                    item.setChecked(true);
                     Intent intent3 = new Intent(Menu.this, Perfil.class);
                     Menu.this.startActivity(intent3);
                     return true;
 
                 case (R.id.Ubicacion):
+                    item.setChecked(true);
                     Intent intent4 = new Intent(Menu.this, MapsActivity.class);
                     Menu.this.startActivity(intent4);
                     return true;

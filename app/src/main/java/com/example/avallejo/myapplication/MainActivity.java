@@ -32,20 +32,23 @@ public class MainActivity extends AppCompatActivity {
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.Menu:
+                    item.setChecked(true);
                     Intent intent1 = new Intent(MainActivity.this, Menu.class);
                     MainActivity.this.startActivity(intent1);
                     return true;
 
                 case R.id.Sonidos:
-
+                    item.setChecked(true);
                     return true;
 
                 case R.id.Perfil:
+                    item.setChecked(true);
                     Intent intent3 = new Intent(MainActivity.this, Perfil.class);
                     MainActivity.this.startActivity(intent3);
 
                     return true;
                 case R.id.Ubicacion:
+                    item.setChecked(true);
                     Intent intent4 = new Intent(MainActivity.this, MapsActivity.class);
                     MainActivity.this.startActivity(intent4);
 
