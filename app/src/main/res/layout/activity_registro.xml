@@ -2,7 +2,6 @@
 <RelativeLayout
 
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -29,9 +28,6 @@
         android:inputType="text"
         android:padding="1sp"
         android:textColor="#fff"
-        android:backgroundTint="#fff"
-        android:foregroundTint="#fff"
-        android:drawableTint="#fff"
         android:textColorHint="#ffffff"
         android:textStyle="bold" />
 
@@ -46,9 +42,6 @@
         android:textColorHint="#ffffff"
         android:hint="@string/usuario"
         android:textColor="#fff"
-        android:backgroundTint="#fff"
-        android:foregroundTint="#fff"
-        android:drawableTint="#fff"
         android:padding="1sp"
         android:inputType="text"
         android:ems="10"
@@ -67,9 +60,6 @@
         android:textColorHint="#ffffff"
         android:id="@+id/Reg_pass"
         android:textColor="#fff"
-        android:backgroundTint="#fff"
-        android:foregroundTint="#fff"
-        android:drawableTint="#fff"
         android:hint="Contraseña"
         android:padding="1sp"
         android:inputType="textEmailAddress"
@@ -89,9 +79,6 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="250sp"
         android:textColor="#fff"
-        android:backgroundTint="#fff"
-        android:foregroundTint="#fff"
-        android:drawableTint="#fff"
         android:textColorHint="#ffffff"
         android:hint="Confirmar Contraseña"
         android:textStyle="bold"
