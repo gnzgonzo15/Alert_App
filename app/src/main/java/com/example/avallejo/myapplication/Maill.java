@@ -25,10 +25,9 @@ public class Maill extends AppCompatActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_mapamenu);
 
-        enviar = findViewById(R.id.btnactivar);
-
+        enviar = findViewById(R.id.enviarmaill);
         enviar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -39,7 +38,6 @@ public class Maill extends AppCompatActivity{
 
                 StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
                 StrictMode.setThreadPolicy(policy);
-
                 Properties properties = new  Properties();
                 properties.put("mail.smtp.host","smtp.googlemail.com");
                 properties.put("mail.smtp.socketFactory.port","465");
@@ -54,7 +52,6 @@ public class Maill extends AppCompatActivity{
                             return new PasswordAuthentication(correo,contrasena);
                         }
                     });
-
                     if (session!=null){
                         Message message = new MimeMessage(session);
                         message.setFrom(new InternetAddress(correo ));
@@ -65,14 +62,9 @@ public class Maill extends AppCompatActivity{
                         message.setContent(texto,"text/html; charset=utf-8");
                         Transport.send(message);
                     }
-
                 }catch (Exception e){
                     e.printStackTrace();
                 }
-
-
-
-
             }
         });
 

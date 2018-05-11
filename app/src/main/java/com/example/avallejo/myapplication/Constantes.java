@@ -1,7 +1,7 @@
 package com.example.avallejo.myapplication;
 
 import android.app.Application;
-import android.support.v7.app.AppCompatActivity;
+
 
 /**
  * Created by Avallejo on 11/04/2018.

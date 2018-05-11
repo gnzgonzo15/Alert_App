@@ -19,7 +19,6 @@ public class Menu extends AppCompatActivity  {
 
     private TextView mTextMessage;
 
-
     //Audio
     Context ctx;
     private RadioButton funcion;
@@ -53,11 +52,9 @@ public class Menu extends AppCompatActivity  {
 
                 case (R.id.Ubicacion):
                     item.setChecked(true);
-                    Intent intent4 = new Intent(Menu.this, MapsActivity.class);
+                    Intent intent4 = new Intent(Menu.this, Mapamenu.class);
                     Menu.this.startActivity(intent4);
                     return true;
-
-
             }
             return false ;
         }

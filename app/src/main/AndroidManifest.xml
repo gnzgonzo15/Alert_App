@@ -38,8 +38,6 @@
         <activity
             android:name=".RegistroActivity"
             android:windowSoftInputMode="stateHidden" />
-        <activity android:name=".Maps" />
-
         <activity
             android:name=".MapsActivity"
             android:label="@string/title_activity_maps" />
@@ -59,8 +57,7 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
-
-
+        <activity android:name=".Mapamenu"></activity>
     </application>
 
 </manifest>
