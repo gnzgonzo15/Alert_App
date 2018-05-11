@@ -2,14 +2,19 @@ package com.example.avallejo.myapplication;
 
 
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
+import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
+import android.view.MenuItem;
+
 import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -28,8 +33,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     double lat = 0.0;
     double lng = 0.0;
 
-
     public MapsActivity(){
+
     }
 
     @Override
