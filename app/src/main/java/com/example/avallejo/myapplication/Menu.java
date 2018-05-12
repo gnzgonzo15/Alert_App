@@ -20,7 +20,8 @@ public class Menu extends AppCompatActivity  {
     private TextView mTextMessage;
 
     //Audio
-    Context ctx;
+    Context ctx ,men;
+
     private RadioButton funcion;
     private Button btnactivar;
     private Boolean active;
@@ -34,7 +35,7 @@ public class Menu extends AppCompatActivity  {
         public boolean onNavigationItemSelected ( MenuItem item) {
             switch (item.getItemId()) {
 
-                case R.id.Menu :
+                case (R.id.Menu) :
                     item.setChecked(true);
                     return true;
 
