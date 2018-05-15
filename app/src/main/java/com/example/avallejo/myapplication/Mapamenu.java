@@ -10,6 +10,7 @@ import android.location.Criteria;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
+import android.os.StrictMode;
 import android.provider.Settings;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.ActivityCompat;
@@ -21,6 +22,16 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.util.Properties;
+
+import javax.mail.Authenticator;
+import javax.mail.Message;
+import javax.mail.PasswordAuthentication;
+import javax.mail.Session;
+import javax.mail.Transport;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
 
 public class Mapamenu extends AppCompatActivity {
 
@@ -34,6 +45,10 @@ public class Mapamenu extends AppCompatActivity {
     TextView longitudeValueGPS, latitudeValueGPS;
     TextView longitudeValueNetwork, latitudeValueNetwork;
     Button mapa , mail;
+    Session session;
+    String usuario;
+    String pass;
+    String mensaje;
 
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
@@ -79,6 +94,51 @@ public class Mapamenu extends AppCompatActivity {
         BottomNavigationView navigation = findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
         mTextMessage = findViewById(R.id.message);
+
+
+        usuario = "alertapp4@gmail.com";
+        pass = "Pruebas123$";
+        mensaje = "Hola mundo";
+
+        mail = findViewById(R.id.enviarmaill);
+        mail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+                StrictMode.setThreadPolicy(policy);
+
+                Properties properties = new Properties();
+                properties.put("mail.smtp.host","smtp.googlemail.com");
+                properties.put("mail.smtp.socketFactory.port","465");
+                properties.put("mail.smtp.socketFactory.class","javax.net.ssl.SSLSocketFactory");
+                properties.put("mail.smtp.auth","true");
+                properties.put("mail.smtp.port","465");
+
+                try {
+                    session = Session.getDefaultInstance(properties, new Authenticator() {
+                        @Override
+                        protected PasswordAuthentication getPasswordAuthentication() {
+                            return new PasswordAuthentication(usuario,pass);
+                        }
+                    });
+
+                    if (session!=null){
+                        Message message = new MimeMessage(session);
+                        message.setFrom(new InternetAddress(usuario));
+                        message.setSubject("Codigo de email");
+                        message.setRecipients(Message.RecipientType.TO, InternetAddress.parse("gnzgonzo15@gmail.com"));
+                        message.setContent(mensaje,"text/html; charset=utf-8");
+                        Transport.send(message);
+                    }
+
+                }catch (Exception e){
+
+                    e.printStackTrace();
+                }
+            }
+        });
+
 
 
         mapa = findViewById( R.id.mostrarmapa );
