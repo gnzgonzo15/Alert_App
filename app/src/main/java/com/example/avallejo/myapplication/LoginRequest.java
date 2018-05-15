@@ -13,13 +13,13 @@ import java.util.Map;
 public class LoginRequest extends StringRequest {
 
 
-    private static final String LOGUIN_REQUEST_URL = "http://192.168.209.1:8090/App_BD/App_login.php";
+    private static final String LOGIN_REQUEST_URL = "http://192.168.209.63:8090/App_BD/App_login.php";
     private Map<String, String> params;
 
     public LoginRequest(String APP_USER, String APP_PASS, Response.Listener<String> listener) {
 
 
-        super(Method.POST, LOGUIN_REQUEST_URL, listener, null);
+        super(Method.POST, LOGIN_REQUEST_URL, listener, null);
 
         params = new HashMap<>();
         params.put("APP_USER", APP_USER);

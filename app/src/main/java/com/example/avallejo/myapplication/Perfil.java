@@ -45,12 +45,12 @@ public class Perfil extends AppCompatActivity {
             case R.id.Menu:
 
                 Intent intent1 = new Intent(Perfil.this, Menu.class);
-                Perfil.this.startActivity(intent1);
+                startActivity(intent1);
                 return true;
 
             case R.id.Sonidos:
                 Intent intent2 = new Intent(Perfil.this, MainActivity.class);
-                Perfil.this.startActivity(intent2);
+                startActivity(intent2);
 
                 return true;
 
@@ -59,7 +59,7 @@ public class Perfil extends AppCompatActivity {
 
             case R.id.Ubicacion:
                 Intent intent4 = new Intent(Perfil.this, Mapamenu.class);
-                Perfil.this.startActivity(intent4);
+                startActivity(intent4);
                 return true;
         }
         return false;

@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
 
     private ListView mainlist;
     private MediaPlayer msp;
-    private String[] listcontent = {"Alerta"};
+    private String[] listcontent = {"Alerta","Alerta2"};
     private int[] resID = {R.raw.alert,};
 
 
@@ -26,25 +26,25 @@ public class MainActivity extends AppCompatActivity {
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.Menu:
-                    item.setChecked(true);
-                    Intent intent1 = new Intent(MainActivity.this, Menu.class);
-                    MainActivity.this.startActivity(intent1);
+                    item.setChecked( true );
+                    Intent intent1 = new Intent( MainActivity.this, Menu.class );
+                    MainActivity.this.startActivity( intent1 );
                     return true;
 
                 case R.id.Sonidos:
-                    item.setChecked(true);
+                    item.setChecked( true );
                     return true;
 
                 case R.id.Perfil:
-                    item.setChecked(true);
-                    Intent intent3 = new Intent(MainActivity.this, Perfil.class);
-                    MainActivity.this.startActivity(intent3);
+                    item.setChecked( true );
+                    Intent intent3 = new Intent( MainActivity.this, Perfil.class );
+                    MainActivity.this.startActivity( intent3 );
 
                     return true;
                 case R.id.Ubicacion:
-                    item.setChecked(true);
-                    Intent intent4 = new Intent(MainActivity.this, Mapamenu.class);
-                    MainActivity.this.startActivity(intent4);
+                    item.setChecked( true );
+                    Intent intent4 = new Intent( MainActivity.this, Mapamenu.class );
+                    MainActivity.this.startActivity( intent4 );
 
                     return true;
 
@@ -55,45 +55,46 @@ public class MainActivity extends AppCompatActivity {
 
 
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        super.onCreate( savedInstanceState );
+        setContentView( R.layout.activity_main );
 
 
-        mainlist = findViewById(R.id.listM);
+        mainlist = findViewById( R.id.listM );
         msp = new MediaPlayer();
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, listcontent);
-        mainlist.setAdapter(adapter);
-        mainlist.setOnItemClickListener(new AdapterView.OnItemClickListener()
+        ArrayAdapter<String> adapter = new ArrayAdapter<>( this, android.R.layout.simple_list_item_1, listcontent );
+        mainlist.setAdapter( adapter );
+        mainlist.setOnItemClickListener( new AdapterView.OnItemClickListener()
 
 
         {
             @Override
-            public void onItemClick (AdapterView < ? > adapterView, View view,
-                                     int position, long id){
-                playSong(position);
-                BottomNavigationView navigation = findViewById(R.id.navigation);
-                navigation.setOnNavigationItemSelectedListener(OnNavigationItemSelectedListener);
+            public void onItemClick(AdapterView<?> adapterView, View view,
+                                    int position, long id) {
+                playSong( position );
+                BottomNavigationView navigation = findViewById( R.id.navigation );
+                navigation.setOnNavigationItemSelectedListener( OnNavigationItemSelectedListener );
 
             }
 
-        });
+        } );
+
+        }
+
+    public void playSong(int songIndex) {
+        // Play song
+        msp.reset();// stops any current playing song
+        msp = MediaPlayer.create( getApplicationContext(), resID[songIndex] );// create's
+        // new mediaplayer with song.
+        msp.start(); // starting mediaplayer
+
     }
 
-     public void playSong(int songIndex) {
-               // Play song
-                msp.reset();// stops any current playing song
-                msp = MediaPlayer.create(getApplicationContext(), resID[songIndex]);// create's
-             // new mediaplayer with song.
-                msp.start(); // starting mediaplayer
 
-            }
-
-
-            @Override
-            public void onDestroy() {
-                super.onDestroy();
-                msp.release();
-            }
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        msp.release();
+    }
 
 }

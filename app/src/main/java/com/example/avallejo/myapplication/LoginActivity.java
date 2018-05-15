@@ -55,7 +55,6 @@ public class LoginActivity extends AppCompatActivity {
             isActivated = rbsesion.isChecked(); // Radio button desactivado
 
             rbsesion.setOnClickListener(new View.OnClickListener() {
-                //Activo
                 @Override
                 public void onClick(View v) {
 
