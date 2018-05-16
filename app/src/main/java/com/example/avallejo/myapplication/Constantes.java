@@ -12,9 +12,6 @@ public class Constantes extends Application {
     private static String name;
     private static String user;
 
-
-
-
     public static String getName() {
         return name;
     }
