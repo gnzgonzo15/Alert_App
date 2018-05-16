@@ -100,7 +100,6 @@ public class MyService extends Service {
         }catch (Exception e){
             e.printStackTrace();
         }
-        return;
     }
 
 }

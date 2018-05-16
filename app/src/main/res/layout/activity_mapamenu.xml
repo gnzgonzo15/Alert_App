@@ -42,7 +42,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/titleTextGPS"
-        android:text="@string/resume"
+        android:text="Actualizar"
         android:onClick="toggleGPSUpdates"/>
 
     <TextView
@@ -105,7 +105,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/titleTextNetwork"
-        android:text="@string/resume"
+        android:text="Actualizar"
         android:onClick="toggleNetworkUpdates"/>
 
     <TextView
@@ -168,7 +168,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/titleTextBest"
-        android:text="@string/resume"
+        android:text="Actualizar"
         android:onClick="toggleBestUpdates"/>
 
     <TextView
@@ -229,19 +229,23 @@
         android:id="@+id/mostrarmapa"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
+        android:layout_centerHorizontal="false"
         android:layout_below="@id/addressText"
-        android:text="Mapa"
+        android:text="Mostrar mapa"
+        android:layout_marginLeft="15sp"
         />
 
     <Button
         android:id="@+id/enviarmaill"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="false"
-        android:layout_below="@id/addressText"
-        android:text="Enviar Maill"
-        />
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="30dp"
+        android:drawableTop="true"
+        android:text="Enviar ubicacion"
+        android:layout_marginRight="30dp"
+        android:layout_alignParentRight="true" />
 
 </RelativeLayout>
     </RelativeLayout>
