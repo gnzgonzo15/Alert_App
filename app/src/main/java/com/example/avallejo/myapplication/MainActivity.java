@@ -16,8 +16,8 @@ public class MainActivity extends AppCompatActivity {
 
     private ListView mainlist;
     private MediaPlayer msp;
-    private String[] listcontent = {"Alerta","Alerta2"};
-    private int[] resID = {R.raw.alert,R.raw.alert2,};
+    private String[] listcontent = {"Alerta 1","Alerta 2","Alerta 3"};
+    private int[] resID = {R.raw.alert,R.raw.alert2,R.raw.alerta3,};
 
 
     private BottomNavigationView.OnNavigationItemSelectedListener OnNavigationItemSelectedListener
