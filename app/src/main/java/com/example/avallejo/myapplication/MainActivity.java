@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     private ListView mainlist;
     private MediaPlayer msp;
     private String[] listcontent = {"Alerta","Alerta2"};
-    private int[] resID = {R.raw.alert,};
+    private int[] resID = {R.raw.alert,R.raw.alert2,};
 
 
     private BottomNavigationView.OnNavigationItemSelectedListener OnNavigationItemSelectedListener
@@ -54,10 +54,13 @@ public class MainActivity extends AppCompatActivity {
     };
 
 
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate( savedInstanceState );
         setContentView( R.layout.activity_main );
 
+        BottomNavigationView navigation = findViewById( R.id.navigation );
+        navigation.setOnNavigationItemSelectedListener( OnNavigationItemSelectedListener );
 
         mainlist = findViewById( R.id.listM );
         msp = new MediaPlayer();
@@ -72,13 +75,9 @@ public class MainActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adapterView, View view,
                                     int position, long id) {
                 playSong( position );
-                BottomNavigationView navigation = findViewById( R.id.navigation );
-                navigation.setOnNavigationItemSelectedListener( OnNavigationItemSelectedListener );
-
             }
 
         } );
-
         }
 
     public void playSong(int songIndex) {

@@ -95,7 +95,7 @@ public class Mapamenu extends AppCompatActivity {
 
         usuario = "alertapp4@gmail.com";
         pass = "Pruebas123$";
-        mensaje = "Hola mundo";
+        mensaje = "";
 
 
 
@@ -212,6 +212,7 @@ public class Mapamenu extends AppCompatActivity {
                 public void run() {
                     longitudeValueNetwork.setText(longitudeNetwork + "");
                     latitudeValueNetwork.setText(latitudeNetwork + "");
+                    mensaje = "Su ubicacion actual es: Latitud: " + latitudeNetwork + " Longitud: " + longitudeNetwork;
                     Toast.makeText(Mapamenu.this, "Network Provider update", Toast.LENGTH_SHORT).show();
                 }
             });
