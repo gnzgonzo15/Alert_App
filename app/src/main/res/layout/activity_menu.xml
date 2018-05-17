@@ -19,18 +19,35 @@
         app:layout_constraintRight_toRightOf="parent"
         app:menu="@menu/navigation" />
 
+    <View
+        android:id="@+id/separator1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/navigation"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@color/material_blue_grey_800"/>
 
     <ImageView
-        android:layout_width="150sp"
-        android:layout_height="150sp"
+        android:id="@+id/imagen"
+        android:layout_width="130sp"
+        android:layout_height="130sp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="80sp"
         android:clickable="true"
         android:scaleType="centerCrop"
         android:src="@drawable/menu"
 
-
         />
+
+    <View
+        android:id="@+id/separator2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/imagen"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="5dp"
+        android:background="@color/material_blue_grey_800"/>
 
     <RadioButton
         android:id="@+id/radiobutton"
@@ -38,8 +55,8 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="20sp"
         android:layout_marginStart="20sp"
-        android:layout_marginTop="300sp"
-        android:text="Activar funciones"
+        android:layout_marginTop="250sp"
+        android:text="Activar seguridad"
 
         />
 
@@ -48,21 +65,24 @@
         android:layout_width="100sp"
         android:layout_height="35sp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="350sp"
+        android:layout_marginTop="300sp"
         android:text="Guardar" />
 
     <TextView
 
-        android:layout_width="250sp"
-        android:layout_height="35sp"
+        android:layout_width="357dp"
+        android:layout_height="50sp"
         android:layout_centerHorizontal="true"
-        android:layout_margin="450sp"
+        android:layout_marginBottom="350sp"
+        android:layout_marginEnd="350sp"
+        android:layout_marginLeft="350sp"
+        android:layout_marginRight="350sp"
+        android:layout_marginStart="350sp"
+        android:layout_marginTop="350sp"
         android:gravity="top"
-        android:text="Version 1.0"
+        android:text="No olvides activar la seguridad de tu dispositivo"
         android:textAlignment="center"
         android:textColor="#000000"
-        android:textSize="20sp"
-
-        />
+        android:textSize="20sp" />
 
 </RelativeLayout>

@@ -17,17 +17,13 @@ import android.widget.Toast;
 
 public class Menu extends AppCompatActivity  {
 
-    private TextView mTextMessage;
-
     //Audio
-    Context ctx ,men;
-
+    Context ctx;
     private RadioButton funcion;
     private Button btnactivar;
     private Boolean active;
     private static final String String_preferences = "Button_state";
     private static final String Preference_estate_Button = "estado.button";
-    AudioManager am;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -66,14 +62,18 @@ public class Menu extends AppCompatActivity  {
 
     }
 
+    private TextView mTextMessage;
+
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
+
         ctx=this;
         //Audio
         AudioManager am = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
+        assert am != null;
         am.setStreamVolume(AudioManager.STREAM_MUSIC,am.getStreamMaxVolume(AudioManager.STREAM_MUSIC),0);
 
         // RadioButton

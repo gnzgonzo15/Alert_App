@@ -9,6 +9,7 @@
 
 
     <ImageView
+        android:id="@+id/imagen2"
         android:layout_width="120sp"
         android:layout_height="120sp"
         android:layout_centerHorizontal="true"
@@ -16,11 +17,20 @@
         android:src="@drawable/sonidos"
         />
 
+    <View
+        android:id="@+id/separator2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/imagen2"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@color/material_blue_grey_800"/>
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="30sp"
         android:layout_marginTop="180sp"
-        android:text="Sonidos"
+        android:text="Alertas"
         android:textAlignment="center"
         android:textSize="25sp"
         android:textColor="#000000"

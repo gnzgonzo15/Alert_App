@@ -25,8 +25,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     private GoogleMap mMap;
     private Marker marcador;
-    double lat = 0.0;
-    double lng = 0.0;
+    public double lat = 0.0;
+    public double lng = 0.0;
 
     public MapsActivity(){
 

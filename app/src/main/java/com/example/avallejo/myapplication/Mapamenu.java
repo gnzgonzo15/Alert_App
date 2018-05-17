@@ -87,7 +87,6 @@ public class Mapamenu extends AppCompatActivity {
         setContentView(R.layout.activity_mapamenu);
 
 
-
         BottomNavigationView navigation = findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
         mTextMessage = findViewById(R.id.message);
@@ -180,8 +179,7 @@ public class Mapamenu extends AppCompatActivity {
     }
 
     private boolean isLocationEnabled() {
-        return locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER) ||
-                locationManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER);
+        return locationManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER);
     }
 
    public void toggleNetworkUpdates(View view) {
@@ -208,6 +206,7 @@ public class Mapamenu extends AppCompatActivity {
             latitudeNetwork = location.getLatitude();
 
             runOnUiThread(new Runnable() {
+                @SuppressLint("SetTextI18n")
                 @Override
                 public void run() {
                     longitudeValueNetwork.setText(longitudeNetwork + "");
