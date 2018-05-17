@@ -17,13 +17,17 @@ import android.widget.Toast;
 
 public class Menu extends AppCompatActivity  {
 
+    private TextView mTextMessage;
+
     //Audio
-    Context ctx;
+    Context ctx ,men;
+
     private RadioButton funcion;
     private Button btnactivar;
     private Boolean active;
     private static final String String_preferences = "Button_state";
     private static final String Preference_estate_Button = "estado.button";
+    AudioManager am;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -62,18 +66,14 @@ public class Menu extends AppCompatActivity  {
 
     }
 
-    private TextView mTextMessage;
-
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
-
         ctx=this;
         //Audio
         AudioManager am = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
-        assert am != null;
         am.setStreamVolume(AudioManager.STREAM_MUSIC,am.getStreamMaxVolume(AudioManager.STREAM_MUSIC),0);
 
         // RadioButton
@@ -88,10 +88,8 @@ public class Menu extends AppCompatActivity  {
             funcion.setChecked(true);
             Toast.makeText(this, "Se encuentra activo", Toast.LENGTH_LONG).show();
             setVolumeControlStream(AudioManager.STREAM_MUSIC);
-
             // Iniciar Servicio
             startService(new Intent(ctx,MyService.class));
-            //
             onResume();
 
         }else{
@@ -116,17 +114,18 @@ public class Menu extends AppCompatActivity  {
                                           @Override
                                           public void onClick(View v) {
                                               saveButton();
-                                              new Maill();
+                                              new MyService();
                                           }
                                       }
         );
     }
 
-    public void saveButton (){
+    public Menu saveButton (){
         SharedPreferences sharedPreferences = getSharedPreferences(String_preferences, MODE_PRIVATE);
         sharedPreferences.edit().putBoolean(Preference_estate_Button, funcion.isChecked()).apply();
         //MyService.
         Toast.makeText(Menu.this, "Nuevo estado guardado", Toast.LENGTH_SHORT).show();
+        return new Menu();
     }
 
     public boolean obtenersavebutton (){

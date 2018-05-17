@@ -32,21 +32,19 @@ public class MusicIntentReceiver extends BroadcastReceiver{
 
     public void DisconectAuriculares() {
         if (_activate) {
-            if ( _intent != null && _intent.getAction() == Intent.ACTION_HEADSET_PLUG) {
+            if ( _intent != null && _intent.getAction().equals(Intent.ACTION_HEADSET_PLUG)) {
                 int state = _intent.getIntExtra("state", -1);
                 if (state == 1) {
                     Utilidades.mostrarToastText(_context, "Audifonos Conectados");
-                    if (mediaPlayer.isLooping())
-                        mediaPlayer.setLooping(false);
-                    if (mediaPlayer.isPlaying())
-                        mediaPlayer.stop();
-                    mediaPlayer.release();
-                    return;
+                    mediaPlayer.stop();
                 } else {
-                    Utilidades.mostrarToastText(_context, "Audifonos Desconectados");
-                    mediaPlayer.setVolume(1f, 1f);
+                    mediaPlayer = MediaPlayer.create(_context, R.raw.alert);
                     mediaPlayer.start();
+                    mediaPlayer.setVolume(1f, 1f);
                     mediaPlayer.setLooping(true);
+                    Utilidades.mostrarToastText(_context, "Audifonos Desconectados");
+                    MyService.Mimail();
+                    new MyService();
                 }
             }
         } else {

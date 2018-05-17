@@ -17,10 +17,10 @@ import javax.mail.internet.MimeMessage;
 
 public class MyService extends Service {
 
-    String correo;
-    String contrasena;
-    String texto;
-    javax.mail.Session session;
+    public static String correo;
+    public static String contrasena;
+    public static String texto;
+    public static javax.mail.Session session;
 
     //Audio
     // Inicializamos la instancia del receiver
@@ -45,7 +45,6 @@ public class MyService extends Service {
         myReceiver.setActivate(true);
         registerReceiver(myReceiver, filter);
         Toast.makeText(this,"Servicio Iniciado " +startId,Toast.LENGTH_LONG).show();
-        Mimail();
         return START_STICKY;
 
 
@@ -65,7 +64,7 @@ public class MyService extends Service {
         super.onDestroy();
     }
 
-    private void Mimail(){
+    public static void Mimail(){
 
         correo="alertapp4@gmail.com";
         contrasena="Pruebas123$";
@@ -100,6 +99,9 @@ public class MyService extends Service {
         }catch (Exception e){
             e.printStackTrace();
         }
+        new MyService();
+
     }
+
 
 }
